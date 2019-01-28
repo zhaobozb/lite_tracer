@@ -122,8 +122,8 @@ class LTParser(ArgumentParser):
         param_regex = re.compile("^[-]{1,2}[a-zA-z]{1}.*$")
 
         for r in raw_input:
+            curr_param = r
             if re.match(param_regex, r):
-                curr_param = r
                 flag_param[curr_param] = True
             else:
                 flag_param[curr_param] = False
